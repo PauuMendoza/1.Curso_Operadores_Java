@@ -19,17 +19,34 @@ public class E7_CalculoDeTiempo {
     public static void main(String[] args) {
         Scanner tec=new Scanner(System.in);
         
-        int dias, semanas;
+        int days, weeks, hoursF;
         
         System.out.println("Ingresa la cantidad de horas: ");
         int horas=tec.nextInt();
         
-        semanas = horas/168;
-        System.out.println(semanas+ "semanas");
-      
-        dias = horas/24;
-        System.out.println(dias+ "dias");
+        weeks = horas/168;
+        //Math.floor(weeks);
+        System.out.println(weeks+" WEEKS");
+     
+        weeks *= 168;
+        horas -= weeks;
+       
+        days = horas / 24;
+        Math.floor(days);
+        System.out.println(days+" DAYS");
         
+        days *= 24;
+        hoursF = horas - days;
+        System.out.println(hoursF+" HOURS");
+        
+        
+        
+        
+        
+        
+        
+      
+       
  
         
         
